@@ -25,3 +25,5 @@ for listing in soup.find_all('div', class_='item facility hasRating'):
 	postcode = listing.find('span', class_='postal-code').text
 	url = listing.find('a', href=True)
 	csvwriter.writerow([listname,address,locality,state,postcode,url['href']])
+csv_file.close()
+html_file.close()
